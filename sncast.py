@@ -81,7 +81,11 @@ def minML(filename, dir_in='./', lon0=-12, lon1=-4, lat0=50.5, lat1=56.6, dlon=0
         a = 1.11
         b = 0.00189
         c = -2.09
-
+    elif region == 'NLG': # Local and Moment Magnitudes in the Groningen Field (2016)
+                          # https://nam-feitenencijfers.data-app.nl/download/rapport/62253e3b-4843-4e65-aa8b-6d5186cc00df?open=true
+        a = 1.33
+        b = 0.00139
+        c = 0.424
     # read in data, file format: "LON, LAT, NOISE [nm], STATION"
 #### 9.10.2020    array_in = np.genfromtxt('%s/%s.dat' %(dir_in, filename), dtype=None, delimiter=",")
 #### 9.10.2020    array_in = np.genfromtxt('%s/%s.dat' %(dir_in, filename), encoding='ASCII', dtype=None, delimiter=",")
